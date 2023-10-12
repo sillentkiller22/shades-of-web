@@ -83,13 +83,27 @@ function App() {
               {
                 data.map((item, index) => {
                   return (
-                    <CardMedia
-                      component="img"
-                      // height="140"
-                      width='1'
-                      image={item.image_url}
-                      alt={item.ID}
-                    />
+                    <Card>
+                      <CardMedia
+                        component="img"
+                        height="440"
+                        // width='1'
+                        image={item.image_url}
+                        alt={item.ID}
+                      />
+                      <Box
+                        sx={{
+                          position: 'absolute',
+                          bottom: 0,
+                          left: 0,
+                          width: '100%',
+                          bgcolor: 'rgba(0, 0, 0, 0.54)',
+                          color: 'white',
+                          padding: '10px',
+                        }}
+                      >{item.post_name.toUpperCase()}</Box>
+
+                    </Card>
                   )
                 })
               }
